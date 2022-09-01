@@ -2,7 +2,7 @@
 
 ## Back-End
 
-### A simple app for your next fresh cut!
+### Schedule endless fresh cutz, fellas!
 
 ### Date: 09/01/2022
 
