@@ -24,11 +24,11 @@ uCutz provides a more efficient way to schedule your next haircut. You can easil
 
 ## Getting Started
 
-    1.   Fork and clone
-    2.   Run npm i
-    3.   npx sequelize db:create
-    4.   npx sequelize db:migrate
-    5.   npx sequelize db:seed:all
+1.   `Fork` and `Clone` this repo.
+2.   Run `npm i` to install dependencies.
+3.   Run `npx sequelize db:create`
+4.   Run  `npx sequelize db:migrate`
+5.   Run `npx sequelize db:seed:all`
 
 ---
 
