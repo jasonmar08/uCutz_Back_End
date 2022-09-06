@@ -20,25 +20,23 @@ module.exports = {
           firstName: 'Billy',
           lastName: 'Bob',
           email: 'billyb@gmail.com',
-          passwordDigest: 'abcdefghi',
+          passwordDigest: 'testuser',
           city: 'Orlando',
           state: 'Florida',
           zip_code: 32803,
-          user_image:
-            'https://static.wikia.nocookie.net/fargo/images/9/9d/Billy-bob-thornton_sc_768x1024.png/revision/latest?cb=20201129041412',
+          user_image: '',
           createdAt: new Date(),
           updatedAt: new Date()
         },
         {
-          firstName: 'Tom',
+          firstName: 'Tommy',
           lastName: 'Cruise',
           email: 'tommyc@gmail.com',
-          passwordDigest: 'ajsdajksndjkj',
+          passwordDigest: 'testuser',
           city: 'Los Angeles',
           state: 'California',
           zip_code: 90210,
-          user_image:
-            'https://www.biography.com/.image/t_share/MTc5ODc1NTM4NjMyOTc2Mzcz/gettyimages-693134468.jpg',
+          user_image: '',
           createdAt: new Date(),
           updatedAt: new Date()
         }
