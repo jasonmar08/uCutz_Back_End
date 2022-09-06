@@ -29,6 +29,9 @@ module.exports = {
       business_image: {
         type: Sequelize.STRING
       },
+      business_site: {
+        type: Sequelize.STRING
+      },
       fb_link: {
         type: Sequelize.STRING
       },
