@@ -31,7 +31,7 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       phoneNumber: {
-        type: Sequelize.INTEGER
+        type: Sequelize.BIGINT
       },
       mobile: {
         type: Sequelize.BOOLEAN

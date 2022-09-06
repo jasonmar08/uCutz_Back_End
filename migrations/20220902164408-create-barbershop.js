@@ -24,7 +24,7 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       phoneNumber: {
-        type: Sequelize.INTEGER
+        type: Sequelize.BIGINT
       },
       business_image: {
         type: Sequelize.STRING
