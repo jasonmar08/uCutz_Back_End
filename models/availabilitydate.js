@@ -9,9 +9,6 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      AvailabilityDate.belongsTo(models.Appointment, {
-        foreignKey: 'appointmentId'
-      })
       AvailabilityDate.belongsTo(models.Barber, { foreignKey: 'barberId' })
       AvailabilityDate.hasMany(models.AvailabilityTime, {
         foreignKey: 'dateId'
@@ -20,17 +17,13 @@ module.exports = (sequelize, DataTypes) => {
   }
   AvailabilityDate.init(
     {
+      day: {
+        type: DataTypes.STRING,
+        allowNull: false
+      },
       date: {
         type: DataTypes.DATEONLY,
         allowNull: false
-      },
-      appointmentId: {
-        type: DataTypes.INTEGER,
-        onDelete: 'CASCADE',
-        references: {
-          model: 'appointments',
-          key: 'id'
-        }
       },
       barberId: {
         type: DataTypes.INTEGER,

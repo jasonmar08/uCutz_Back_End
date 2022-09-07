@@ -11,15 +11,24 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
       Appointment.belongsTo(models.User, { foreignKey: 'userId' })
       Appointment.belongsTo(models.Barber, { foreignKey: 'barberId' })
-      Appointment.hasMany(models.AvailabilityDate, {
-        foreignKey: 'appointmentId'
-      })
     }
   }
   Appointment.init(
     {
       specialRequest: DataTypes.STRING,
       inspoImage: DataTypes.STRING,
+      appt_day: {
+        type: DataTypes.STRING,
+        allowNull: false
+      },
+      appt_date: {
+        type: DataTypes.DATEONLY,
+        allowNull: false
+      },
+      appt_time: {
+        type: DataTypes.TIME,
+        allowNull: false
+      },
       userId: {
         type: DataTypes.INTEGER,
         onDelete: 'CASCADE',

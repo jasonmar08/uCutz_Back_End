@@ -8,17 +8,13 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
+      day: {
+        type: Sequelize.STRING,
+        allowNull: false
+      },
       date: {
         type: Sequelize.DATEONLY,
         allowNull: false
-      },
-      appointmentId: {
-        type: Sequelize.INTEGER,
-        onDelete: 'CASCADE',
-        references: {
-          model: 'barbers',
-          key: 'id'
-        }
       },
       barberId: {
         type: Sequelize.INTEGER,

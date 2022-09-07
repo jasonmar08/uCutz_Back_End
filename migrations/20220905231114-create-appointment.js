@@ -14,6 +14,18 @@ module.exports = {
       inspoImage: {
         type: Sequelize.STRING
       },
+      appt_day: {
+        type: Sequelize.STRING,
+        allowNull: false
+      },
+      appt_date: {
+        type: Sequelize.DATEONLY,
+        allowNull: false
+      },
+      appt_time: {
+        type: Sequelize.TIME,
+        allowNull: false
+      },
       userId: {
         type: Sequelize.INTEGER,
         onDelete: 'CASCADE',

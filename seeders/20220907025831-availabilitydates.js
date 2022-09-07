@@ -1,7 +1,7 @@
 'use strict'
 
+// day: '',
 // date: '',
-// appointmentId: ,
 // barberId: ,
 // createdAt: new Date(),
 // updatedAt: new Date()
@@ -12,15 +12,36 @@ module.exports = {
       'availability_dates',
       [
         {
-          date: '2022-09-22',
-          appointmentId: 1,
+          day: 'Saturday',
+          date: '2022-09-17',
           barberId: 2,
           createdAt: new Date(),
           updatedAt: new Date()
         },
         {
+          day: 'Sunday',
+          date: '2022-09-18',
+          barberId: 2,
+          createdAt: new Date(),
+          updatedAt: new Date()
+        },
+        {
+          day: 'Tuesday',
+          date: '2022-09-20',
+          barberId: 1,
+          createdAt: new Date(),
+          updatedAt: new Date()
+        },
+        {
+          day: 'Wednesday',
+          date: '2022-09-21',
+          barberId: 1,
+          createdAt: new Date(),
+          updatedAt: new Date()
+        },
+        {
+          day: 'Thursday',
           date: '2022-09-22',
-          appointmentId: 2,
           barberId: 1,
           createdAt: new Date(),
           updatedAt: new Date()
