@@ -1,4 +1,4 @@
-const { User } = require('../models')
+const { User, Appointment } = require('../models')
 
 const getAllUsers = async (req, res) => {
   try {
@@ -13,7 +13,7 @@ const getUserById = async (req, res) => {
   try {
     let userId = parseInt(req.params.user_id)
     let user = await User.findAll({
-      where: { id: userId }
+      where: { userId: userId }
     })
     res.send(user)
   } catch (error) {
@@ -56,10 +56,70 @@ const deleteUser = async (req, res) => {
   }
 }
 
+const getAllAppointments = async (req, res) => {
+  try {
+    let appointments = await Appointment.findAll()
+    res.send(appointments)
+  } catch (error) {
+    throw error
+  }
+}
+
+const getUserAppointments = async (req, res) => {
+  try {
+    let userId = parseInt(req.params.user_id)
+    let userAppointments = await Appointment.findAll({
+      where: { userId: userId }
+    })
+    res.send(userAppointments)
+  } catch (error) {
+    throw error
+  }
+}
+
+const createNewAppointment = async (req, res) => {
+  try {
+    let newAppointment = await Appointment.create({ ...req.body })
+    res.send(newAppointment)
+  } catch (error) {
+    throw error
+  }
+}
+
+const updateAppointment = async (req, res) => {
+  try {
+    let apptId = parseInt(req.params.appt_id)
+    let updatedAppointment = await Appointment.update(req.body, {
+      where: { id: apptId },
+      returning: true
+    })
+    res.send(updatedAppointment)
+  } catch (error) {
+    throw error
+  }
+}
+
+const deleteAppointment = async (req, res) => {
+  try {
+    let apptId = parseInt(req.params.appt_id)
+    await Appointment.destroy({
+      where: { id: apptId }
+    })
+    res.send({ msg: `Deleted appointment with id of ${apptId}` })
+  } catch (error) {
+    throw error
+  }
+}
+
 module.exports = {
   getAllUsers,
   getUserById,
   // createNewUser,
   updateUser,
-  deleteUser
+  deleteUser,
+  getAllAppointments,
+  getUserAppointments,
+  createNewAppointment,
+  updateAppointment,
+  deleteAppointment
 }
