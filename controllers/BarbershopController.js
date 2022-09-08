@@ -1,4 +1,4 @@
-const { Barbershop } = require('../models')
+const { Barbershop, Barber } = require('../models')
 
 const getAllBarbershops = async (req, res) => {
   try {
@@ -12,10 +12,19 @@ const getAllBarbershops = async (req, res) => {
 const getBarbershopById = async (req, res) => {
   try {
     let barbershopId = parseInt(req.params.barbershop_id)
+    let barbers = await Barber.findAll({
+      where: { barbershopId: barbershopId },
+      attributes: ['id', 'firstName', 'email']
+    })
+    // let barbersList = {
+    //   id: barbers.id,
+    //   name: barbers.firstName,
+    //   email: barbers.email
+    // }
     let barbershop = await Barbershop.findAll({
       where: { id: barbershopId }
     })
-    res.send(barbershop)
+    res.send({ barbershop, barbers: barbers })
   } catch (error) {
     throw error
   }
