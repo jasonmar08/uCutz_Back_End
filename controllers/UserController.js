@@ -65,7 +65,7 @@ const getAllAppointments = async (req, res) => {
   }
 }
 
-const getUserAppointments = async (req, res) => {
+const getAppointmentsByUserId = async (req, res) => {
   try {
     let userId = parseInt(req.params.user_id)
     let userAppointments = await Appointment.findAll({
@@ -118,7 +118,7 @@ module.exports = {
   updateUser,
   deleteUser,
   getAllAppointments,
-  getUserAppointments,
+  getAppointmentsByUserId,
   createNewAppointment,
   updateAppointment,
   deleteAppointment

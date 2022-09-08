@@ -22,10 +22,35 @@ Router.delete(
   middleware.verifyToken,
   userController.deleteUser
 )
-Router.get('/appointments/all', userController.getAllAppointments)
-Router.get('/appointments/:user_id', userController.getUserAppointments)
-Router.post('/appointments/', userController.createNewAppointment)
-Router.put('/appointments/:appt_id', userController.updateAppointment)
-Router.delete('/appointments/:appt_id', userController.deleteAppointment)
+Router.get(
+  '/appointments/all',
+  middleware.stripToken,
+  middleware.verifyToken,
+  userController.getAllAppointments
+)
+Router.get(
+  '/appointments/:user_id',
+  middleware.stripToken,
+  middleware.verifyToken,
+  userController.getAppointmentsByUserId
+)
+Router.post(
+  '/appointments/',
+  middleware.stripToken,
+  middleware.verifyToken,
+  userController.createNewAppointment
+)
+Router.put(
+  '/appointments/:appt_id',
+  middleware.stripToken,
+  middleware.verifyToken,
+  userController.updateAppointment
+)
+Router.delete(
+  '/appointments/:appt_id',
+  middleware.stripToken,
+  middleware.verifyToken,
+  userController.deleteAppointment
+)
 
 module.exports = Router

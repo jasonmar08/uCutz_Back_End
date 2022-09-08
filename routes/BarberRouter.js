@@ -22,11 +22,89 @@ Router.delete(
   middleware.verifyToken,
   barberController.deleteBarber
 )
-Router.get('/appointments/:barber_id', barberController.getBarberAppointments)
-Router.get('/services/all', barberController.getAllServices)
-Router.get('/services/:barber_id', barberController.getBarberServices)
-Router.post('/services', barberController.createNewService)
-Router.put('/services/:service_id', barberController.updateService)
-Router.delete('/services/:service_id', barberController.deleteService)
+Router.get(
+  '/appointments/:barber_id',
+  middleware.stripToken,
+  middleware.verifyToken,
+  barberController.getAppointmentsByBarberId
+)
+Router.get(
+  '/services/all',
+  middleware.stripToken,
+  middleware.verifyToken,
+  barberController.getAllServices
+)
+Router.get(
+  '/services/:barber_id',
+  middleware.stripToken,
+  middleware.verifyToken,
+  barberController.getServicesByBarberId
+)
+Router.post(
+  '/services',
+  middleware.stripToken,
+  middleware.verifyToken,
+  barberController.createNewService
+)
+Router.put(
+  '/services/:service_id',
+  middleware.stripToken,
+  middleware.verifyToken,
+  barberController.updateService
+)
+Router.delete(
+  '/services/:service_id',
+  middleware.stripToken,
+  middleware.verifyToken,
+  barberController.deleteService
+)
+Router.get(
+  '/availability/dates/all',
+  middleware.stripToken,
+  middleware.verifyToken,
+  barberController.getAllAvailabilityDates
+)
+Router.get(
+  '/availability/dates/times/all',
+  middleware.stripToken,
+  middleware.verifyToken,
+  barberController.getAllAvailabilityTimes
+)
+Router.get(
+  '/availability/dates/:barber_id',
+  middleware.stripToken,
+  middleware.verifyToken,
+  barberController.getAvailabilityDates
+)
+Router.get(
+  '/availability/dates/times/:date_id',
+  middleware.stripToken,
+  middleware.verifyToken,
+  barberController.getAvailabilityTimes
+)
+Router.post(
+  '/availability/dates',
+  middleware.stripToken,
+  middleware.verifyToken,
+  barberController.createNewAvailabilityDate
+)
+Router.post(
+  '/availability/dates/times',
+  middleware.stripToken,
+  middleware.verifyToken,
+  barberController.createNewAvailabilityTime
+)
+Router.delete(
+  '/availability/dates/:date_id',
+  middleware.stripToken,
+  middleware.verifyToken,
+  barberController.deleteAvailabilityDate
+)
+Router.delete(
+  '/availability/dates/times/:time_id',
+  middleware.stripToken,
+  middleware.verifyToken,
+  barberController.deleteAvailabilityTime
+)
 
 module.exports = Router
