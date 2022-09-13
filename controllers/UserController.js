@@ -12,8 +12,8 @@ const getAllUsers = async (req, res) => {
 const getUserById = async (req, res) => {
   try {
     let userId = parseInt(req.params.user_id)
-    let user = await User.findAll({
-      where: { userId: userId }
+    let user = await User.findOne({
+      where: { id: userId }
     })
     res.send(user)
   } catch (error) {

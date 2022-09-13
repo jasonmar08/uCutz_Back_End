@@ -27,5 +27,9 @@ Router.delete(
   middleware.verifyToken,
   barbershopController.deleteBarbershop
 )
+Router.get(
+  '/:barbershop_id/barbers',
+  barbershopController.getBarbersByBarbershopId
+)
 
 module.exports = Router

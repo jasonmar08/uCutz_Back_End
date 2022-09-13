@@ -74,18 +74,10 @@ const getAllServices = async (req, res) => {
 const getServicesByBarberId = async (req, res) => {
   try {
     let barberId = parseInt(req.params.barber_id)
-    let barber = await Barber.findOne({
-      where: { id: barberId }
-    })
-    let barberInfo = {
-      id: barber.id,
-      name: barber.firstName,
-      email: barber.email
-    }
     let barberServices = await Service.findAll({
       where: { barberId: barberId }
     })
-    res.send({ barber: barberInfo, barberServices })
+    res.send(barberServices)
   } catch (error) {
     throw error
   }
@@ -158,18 +150,19 @@ const getAllAvailabilityTimes = async (req, res) => {
 const getAvailabilityDates = async (req, res) => {
   try {
     let barberId = parseInt(req.params.barber_id)
-    let barber = await Barber.findOne({
-      where: { id: barberId }
-    })
-    let barberInfo = {
-      id: barber.id,
-      name: barber.firstName,
-      email: barber.email
-    }
     let availabilityDates = await AvailabilityDate.findAll({
-      where: { barberId: barberId }
+      where: { barberId }
     })
-    res.send({ barber: barberInfo, availabilityDates })
+    let test = await AvailabilityDate.findAll({
+      include: [
+        {
+          model: AvailabilityTime,
+          required: true
+        }
+      ],
+      where: { barberId }
+    })
+    res.send(test)
   } catch (error) {
     throw error
   }
@@ -178,24 +171,10 @@ const getAvailabilityDates = async (req, res) => {
 const getAvailabilityTimes = async (req, res) => {
   try {
     let dateId = parseInt(req.params.date_id)
-    let date = await AvailabilityDate.findOne({
-      where: { id: dateId }
-    })
-    let barber = await Barber.findOne({
-      where: { id: date.barberId }
-    })
-    let barberInfo = {
-      barber_id: barber.id,
-      name: barber.firstName,
-      email: barber.email,
-      avail_date_id: date.id,
-      avail_date_day: date.day,
-      avail_date: date.date
-    }
     let availabilityTimes = await AvailabilityTime.findAll({
       where: { dateId: dateId }
     })
-    res.send({ barber: barberInfo, availabilityTimes })
+    res.send(availabilityTimes)
   } catch (error) {
     throw error
   }

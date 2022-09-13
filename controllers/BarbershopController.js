@@ -65,10 +65,23 @@ const deleteBarbershop = async (req, res) => {
   }
 }
 
+const getBarbersByBarbershopId = async (req, res) => {
+  try {
+    let barbershopId = parseInt(req.params.barbershop_id)
+    let barbers = await Barber.findAll({
+      where: { barbershopId: barbershopId }
+    })
+    res.send(barbers)
+  } catch (error) {
+    throw error
+  }
+}
+
 module.exports = {
   getAllBarbershops,
   getBarbershopById,
   createNewBarbershop,
   updateBarbershop,
-  deleteBarbershop
+  deleteBarbershop,
+  getBarbersByBarbershopId
 }

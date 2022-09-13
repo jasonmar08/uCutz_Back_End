@@ -35,15 +35,13 @@ const createToken = (payload) => {
 // JWT token verification function //
 const verifyToken = (req, res, next) => {
   const { token } = res.locals
-  try {
-    let payload = jwt.verify(token, APP_SECRET)
-    if (payload) {
-      return next()
-    }
-    res.status(401).send({ status: 'Error', msg: 'Unauthorized' })
-  } catch (error) {
-    res.status(401).send({ status: 'Error', msg: 'Unauthorized' })
+  let payload = jwt.verify(token, APP_SECRET)
+  console.log(payload)
+  if (payload) {
+    res.locals.payload = payload
+    return next()
   }
+  res.status(401).send({ status: 'Error', msg: 'Unauthorized' })
 }
 
 // Strip JWT token function //

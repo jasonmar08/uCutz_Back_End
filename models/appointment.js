@@ -29,6 +29,10 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.TIME,
         allowNull: false
       },
+      service: {
+        type: DataTypes.STRING,
+        allowNull: false
+      },
       userId: {
         type: DataTypes.INTEGER,
         onDelete: 'CASCADE',
