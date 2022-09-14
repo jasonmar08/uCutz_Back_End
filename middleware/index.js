@@ -39,6 +39,7 @@ const verifyToken = (req, res, next) => {
   console.log(payload)
   if (payload) {
     res.locals.payload = payload
+    req.idFromToken = payload.id
     return next()
   }
   res.status(401).send({ status: 'Error', msg: 'Unauthorized' })

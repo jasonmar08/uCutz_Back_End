@@ -9,6 +9,13 @@ Router.get(
   middleware.verifyToken,
   userController.getUserById
 )
+
+Router.get(
+  '/',
+  middleware.stripToken,
+  middleware.verifyToken,
+  userController.getUserFromToken
+)
 // Router.post('/create', userController.createNewUser)
 Router.put(
   '/:user_id',

@@ -9,6 +9,12 @@ Router.get(
   middleware.verifyToken,
   barberController.getBarberById
 )
+Router.get(
+  '/',
+  middleware.stripToken,
+  middleware.verifyToken,
+  barberController.getBarberFromToken
+)
 // Router.post('/', barberController.createNewBarber)
 Router.put(
   '/:barber_id',

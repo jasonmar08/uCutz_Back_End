@@ -27,6 +27,18 @@ const getBarberById = async (req, res) => {
   }
 }
 
+const getBarberFromToken = async (req, res) => {
+  try {
+    let barberId = parseInt(req.idFromToken)
+    let barber = await Barber.findOne({
+      where: { id: barberId }
+    })
+    res.send(barber)
+  } catch (error) {
+    throw error
+  }
+}
+
 // const createNewBarber = async (req, res) => {
 //   try {
 //     let body = { ...req.body }
@@ -227,6 +239,7 @@ const deleteAvailabilityTime = async (req, res) => {
 module.exports = {
   getAllBarbers,
   getBarberById,
+  getBarberFromToken,
   // createNewBarber,
   updateBarber,
   deleteBarber,

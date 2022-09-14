@@ -21,6 +21,18 @@ const getUserById = async (req, res) => {
   }
 }
 
+const getUserFromToken = async (req, res) => {
+  try {
+    let userId = parseInt(req.idFromToken)
+    let user = await User.findOne({
+      where: { id: userId }
+    })
+    res.send(user)
+  } catch (error) {
+    throw error
+  }
+}
+
 // const createNewUser = async (req, res) => {
 //   try {
 //     let body = { ...req.body }
@@ -38,6 +50,9 @@ const updateUser = async (req, res) => {
       where: { id: userId },
       returning: true
     })
+
+    console.log('UPDAT ', updatedUser)
+
     res.send(updatedUser)
   } catch (error) {
     throw error
@@ -78,6 +93,7 @@ const getAppointmentsByUserId = async (req, res) => {
 }
 
 const createNewAppointment = async (req, res) => {
+  console.log('REQ BODY', req.body)
   try {
     let newAppointment = await Appointment.create({ ...req.body })
     res.send(newAppointment)
@@ -114,6 +130,7 @@ const deleteAppointment = async (req, res) => {
 module.exports = {
   getAllUsers,
   getUserById,
+  getUserFromToken,
   // createNewUser,
   updateUser,
   deleteUser,
