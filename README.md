@@ -35,11 +35,11 @@ uCutz provides a more efficient way to schedule your next haircut. As a customer
 
 ## Screenshots
 
-#### Mobile Version
-
-
-#### Browser Version
-
+<div style= "center">
+    <pre>
+        <img src="/images/homepage.png"  height="450">&nbsp;&nbsp;&nbsp;<img src="/images/barber_avail.png" height="450">&nbsp;&nbsp;&nbsp;<img src="/images/barbershop_page.png" height="450">&nbsp;&nbsp;&nbsp;
+    </pre>
+</div>
 
 ---
 
