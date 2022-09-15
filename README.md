@@ -1,4 +1,4 @@
-<img style="center" src="https://www.signsworldwide.com/images/thumbnails/1007/387/detailed/4/Barber-Shop-Stripes-banner.jpg" alt="uCutz Banner"  width="1000">
+<img style="center" src="images/banner.png" alt="uCutz Banner"  width="1000">
 
 ## Back-End
 
@@ -37,7 +37,7 @@ uCutz provides a more efficient way to schedule your next haircut. As a customer
 
 <div style= "center">
     <pre>
-        <img src="/public/assets/homepage.png"  height="450">&nbsp;&nbsp;&nbsp;<img src="/public/assets/barbershop_details.png" height="450">&nbsp;&nbsp;&nbsp;<img src="/public/assets/barber_availability.png" height="450">&nbsp;&nbsp;&nbsp;<img src="/public/assets/barber_appointmetns.png" height="450">&nbsp;&nbsp;&nbsp;<img src="/public/assets/barber_profile.png" height="450">&nbsp;&nbsp;&nbsp;
+        <img src="images/homepage.png"  height="450">&nbsp;&nbsp;&nbsp;<img src="images/barbershop_details.png" height="450">&nbsp;&nbsp;&nbsp;<img src="images/barber_availability.png" height="450">&nbsp;&nbsp;&nbsp;<img src="images/barber-appointments.png" height="450">&nbsp;&nbsp;&nbsp;<img src="images/barber_profile.png" height="450">&nbsp;&nbsp;&nbsp;
     </pre>
 </div>
 
