@@ -1,8 +1,28 @@
-const { BarbershopReview } = require('../models')
+const { BarbershopReview, Barbershop, User } = require('../models')
 
 const getAllBarbershopReviews = async (req, res) => {
   try {
     let barbershopReviews = await BarbershopReview.findAll()
+    res.send(barbershopReviews)
+  } catch (error) {
+    throw error
+  }
+}
+
+const getReviewsByBarbershopId = async (req, res) => {
+  try {
+    let barbershopId = parseInt(req.params.barbershop_id)
+    let barbershopReviews = await BarbershopReview.findAll({
+      where: { barbershopId: barbershopId },
+      include: [
+        {
+          model: User,
+          required: true,
+          attributes: ['id', 'firstName', 'user_image']
+        }
+      ],
+      order: [['createdAt', 'DESC']]
+    })
     res.send(barbershopReviews)
   } catch (error) {
     throw error
@@ -57,6 +77,7 @@ const deleteBarbershopReview = async (req, res) => {
 
 module.exports = {
   getAllBarbershopReviews,
+  getReviewsByBarbershopId,
   getBarbershopReviewById,
   createBarbershopReview,
   updateBarbershopReview,

@@ -3,6 +3,10 @@ const barbershopReviewController = require('../controllers/BarbershopReviewContr
 const middleware = require('../middleware')
 
 Router.get('/all', barbershopReviewController.getAllBarbershopReviews)
+Router.get(
+  '/:barbershop_id',
+  barbershopReviewController.getReviewsByBarbershopId
+)
 Router.get('/:review_id', barbershopReviewController.getBarbershopReviewById)
 Router.post(
   '/',

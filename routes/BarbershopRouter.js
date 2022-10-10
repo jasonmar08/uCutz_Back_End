@@ -9,12 +9,7 @@ Router.get(
   middleware.verifyToken,
   barbershopController.getBarbershopById
 )
-Router.post(
-  '/',
-  middleware.stripToken,
-  middleware.verifyToken,
-  barbershopController.createNewBarbershop
-)
+Router.post('/', barbershopController.createNewBarbershop)
 Router.put(
   '/:barbershop_id',
   middleware.stripToken,
