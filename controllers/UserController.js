@@ -84,7 +84,11 @@ const getAppointmentsByUserId = async (req, res) => {
   try {
     let userId = parseInt(req.params.user_id)
     let userAppointments = await Appointment.findAll({
-      where: { userId: userId }
+      where: { userId: userId },
+      order: [
+        ['appt_date', 'ASC'],
+        ['appt_time', 'ASC']
+      ]
     })
     res.send(userAppointments)
   } catch (error) {
