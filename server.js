@@ -37,4 +37,7 @@ app.use('/barber_reviews', BarberReviewRouter)
 
 // Base route to test server: //
 app.get('/', (req, res) => res.json({ message: 'Server Works' }))
+app.get('/all-barbershops', (req, res) =>
+  res.json({ message: 'All barbershops will go here' })
+)
 app.listen(PORT, () => console.log(`Server running on port: ${PORT}`))
