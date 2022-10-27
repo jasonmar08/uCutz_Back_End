@@ -1,17 +1,23 @@
 {
   "development": {
-    "database": "ucutz",
-    "host": "127.0.0.1",
-    "dialect": "postgres"
+    "database": "d7bjk20ulgdf6q",
+    "host": "ec2-44-205-41-76.compute-1.amazonaws.com",
+    "dialect": "postgres",
+    "username": "vewcaoddwulpvy",
+    "password": "2bb9f1d0afd24b430c619296c6f0caa914d1bd9be7aafa4a04673ef77d8f2ad3"
   },
   "test": {
-    "database": "ucutz",
-    "host": "127.0.0.1",
-    "dialect": "postgres"
+    "database": "d7bjk20ulgdf6q",
+    "host": "ec2-44-205-41-76.compute-1.amazonaws.com",
+    "dialect": "postgres",
+    "username": "vewcaoddwulpvy",
+    "password": "2bb9f1d0afd24b430c619296c6f0caa914d1bd9be7aafa4a04673ef77d8f2ad3"
   },
   "production": {
-    "database": "ucutz",
-    "host": "127.0.0.1",
-    "dialect": "postgres"
+    "database": "d7bjk20ulgdf6q",
+    "host": "ec2-44-205-41-76.compute-1.amazonaws.com",
+    "dialect": "postgres",
+    "username": "vewcaoddwulpvy",
+    "password": "2bb9f1d0afd24b430c619296c6f0caa914d1bd9be7aafa4a04673ef77d8f2ad3"
   }
 }
