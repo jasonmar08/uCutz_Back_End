@@ -1,23 +1,17 @@
 {
   "development": {
-    "database": "ucutz_db",
-    "host": "dpg-cdcf2go2i3msb9453h10-a",
-    "dialect": "postgres",
-    "username": "ucutz_db_user",
-    "password": "Itkh7Vq2FopnPPlF73SiKrWkgGIMsNUX"
+    "database": "ucutz",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
   },
   "test": {
-    "database": "ucutz_db",
-    "host": "dpg-cdcf2go2i3msb9453h10-a",
-    "dialect": "postgres",
-    "username": "ucutz_db_user",
-    "password": "Itkh7Vq2FopnPPlF73SiKrWkgGIMsNUX"
+    "database": "ucutz",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
   },
   "production": {
-    "database": "ucutz_db",
-    "host": "dpg-cdcf2go2i3msb9453h10-a",
-    "dialect": "postgres",
-    "username": "ucutz_db_user",
-    "password": "Itkh7Vq2FopnPPlF73SiKrWkgGIMsNUX"
+    "database": "ucutz",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
   }
 }
