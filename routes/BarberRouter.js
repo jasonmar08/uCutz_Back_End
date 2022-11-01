@@ -100,6 +100,12 @@ Router.post(
   middleware.verifyToken,
   barberController.createNewAvailabilityTime
 )
+Router.put(
+  '/availability/dates/times/:time_id',
+  middleware.stripToken,
+  middleware.verifyToken,
+  barberController.updateAvailabilityTimeById
+)
 Router.delete(
   '/availability/dates/:date_id',
   middleware.stripToken,

@@ -210,6 +210,19 @@ const createNewAvailabilityTime = async (req, res) => {
   }
 }
 
+const updateAvailabilityTimeById = async (req, res) => {
+  try {
+    let timeId = parseInt(req.params.time_id)
+    let updatedTime = await availabilityTimes.update(req.body, {
+      where: { id: timeId },
+      returning: true
+    })
+    res.send(updatedTime)
+  } catch (error) {
+    throw error
+  }
+}
+
 const deleteAvailabilityDate = async (req, res) => {
   try {
     let dateId = parseInt(req.params.date_id)
@@ -255,6 +268,7 @@ module.exports = {
   getAvailabilityTimes,
   createNewAvailabilityDate,
   createNewAvailabilityTime,
+  updateAvailabilityTimeById,
   deleteAvailabilityDate,
   deleteAvailabilityTime
 }
