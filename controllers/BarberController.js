@@ -213,7 +213,7 @@ const createNewAvailabilityTime = async (req, res) => {
 const updateAvailabilityTimeById = async (req, res) => {
   try {
     let timeId = parseInt(req.params.time_id)
-    let updatedTime = await availabilityTimes.update(req.body, {
+    let updatedTime = await AvailabilityTimes.update(req.body, {
       where: { id: timeId },
       returning: true
     })
