@@ -20,6 +20,27 @@ if (config.use_env_variable) {
   )
 }
 
+// const DB_NAME = 'd7bjk20ulgdf6q'
+// const DB_HOST = 'ec2-44-205-41-76.compute-1.amazonaws.com'
+// const DB_USERNAME = 'vewcaoddwulpvy'
+// const DB_PASS =
+//   '2bb9f1d0afd24b430c619296c6f0caa914d1bd9be7aafa4a04673ef77d8f2ad3'
+// const DB_PORT = 5432
+
+// let sequelize = new Sequelize(DB_NAME, DB_USERNAME, DB_PASS, {
+//   dialect: 'postgres',
+//   dialectOptions: {
+//     ssl: {
+//       require: true,
+//       rejectUnauthorized: false // <<<<<<< YOU NEED THIS
+//     }
+//   },
+//   host: DB_HOST,
+//   port: DB_PORT,
+//   // logging: false,
+//   ssl: true
+// })
+
 fs.readdirSync(__dirname)
   .filter((file) => {
     return (
