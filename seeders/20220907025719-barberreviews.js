@@ -37,6 +37,27 @@ module.exports = {
           barberId: 2,
           createdAt: new Date(),
           updatedAt: new Date()
+        },
+        {
+          rating: 4,
+          caption: 'Great cut!',
+          comment: 'Kevin did an amazing job! Will definitely return!',
+          review_image: '',
+          userId: 2,
+          barberId: 3,
+          createdAt: new Date(),
+          updatedAt: new Date()
+        },
+        {
+          rating: 3,
+          caption: 'Haircut was ok',
+          comment:
+            "I showed Mike a picture of the style I wanted. He did his best to match the photo, but it's not entirely what I asked for.",
+          review_image: '',
+          userId: 3,
+          barberId: 8,
+          createdAt: new Date(),
+          updatedAt: new Date()
         }
       ],
       {}
