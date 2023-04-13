@@ -1,6 +1,6 @@
-<img style="center" src="images/banner.png" alt="uCutz Banner"  width="1000">
+<img style="center" src="/images/banner_new.png" alt="uCutz Banner"  width="1000">
 
-## Back-End
+## Front-End
 
 ### 💈 Schedule endless fresh cutz, fellas! 💈
 
@@ -28,17 +28,24 @@ uCutz provides a more efficient way to schedule your next haircut. As a customer
 
 1.  `Fork` and `Clone` this repo.
 2.  Run `npm i` to install dependencies.
-3.  Run `npx sequelize db:create`
-4.  Run `npx sequelize db:migrate`
-5.  Run `npx sequelize db:seed:all`
 
 ---
 
 ## Screenshots
 
+#### Mobile Version
+
 <div style= "center">
     <pre>
-        <img src="images/homepage.png"  height="450">&nbsp;&nbsp;&nbsp;<img src="images/barbershop_details.png" height="450">&nbsp;&nbsp;&nbsp;<img src="images/barber_availability.png" height="450">&nbsp;&nbsp;&nbsp;<img src="images/barber-appointments.png" height="450">&nbsp;&nbsp;&nbsp;<img src="images/barber_profile.png" height="450">&nbsp;&nbsp;&nbsp;
+        <img src="/images/ucutz_home_mobile.png"  height="350">&nbsp;&nbsp;&nbsp;<img src="/images/ucutz_login_home_mobile.png" height="350">&nbsp;&nbsp;&nbsp;<img src="/images/ucutz_barbershop_mobile.png" height="350">&nbsp;&nbsp;&nbsp;<img src="/images/ucutz_rating_mobile.png" height="350">&nbsp;&nbsp;&nbsp;<img src="/images/ucutz_availability_mobile.png" height="350">&nbsp;&nbsp;&nbsp;<img src="/images/ucutz_profile_mobile.png" height="350">&nbsp;&nbsp;&nbsp;
+    </pre>
+</div>
+
+#### Browser Version
+
+<div style= "center">
+    <pre>
+        <img src="/images/ucutz_home.png"  height="420">&nbsp;&nbsp;&nbsp;<img src="/images/ucutz_login_home.png" height="420">&nbsp;&nbsp;&nbsp;<img src="/images/ucutz_barbershop.png" height="420">&nbsp;&nbsp;&nbsp;<img src="/images/ucutz_rating.png" height="420">&nbsp;&nbsp;&nbsp;<img src="/images/ucutz_availability.png" height="420">&nbsp;&nbsp;&nbsp;<img src="/images/ucutz_profile.png" height="420">&nbsp;&nbsp;&nbsp;
     </pre>
 </div>
 
@@ -46,7 +53,7 @@ uCutz provides a more efficient way to schedule your next haircut. As a customer
 
 ## Technologies Used
 
-<img style="center" src="https://i.postimg.cc/9fsrDs1d/PERN.png" alt="Pern Stack"  width="1000">
+<img style="center" src="https://i.postimg.cc/9fsrDs1d/PERN.png" alt="Pern Stack" width="1000">
 
 - JavaScript
 - PostgreSQL
