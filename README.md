@@ -1,6 +1,6 @@
 <img style="center" src="/images/banner_new.png" alt="uCutz Banner"  width="1000">
 
-## Front-End
+## Back-End
 
 ### 💈 Schedule endless fresh cutz, fellas! 💈
 
